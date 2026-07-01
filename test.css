@@ -1,0 +1,156 @@
+/* Reset and General Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.testimonials-section {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Heading */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 80px; /* Profile image overlap साठी स्पेस सोडली आहे */
+}
+
+.section-title span {
+    color: #2b6bf3;
+}
+
+/* Container Grid */
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Testimonial Cards Base */
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 0 30px 40px 30px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Profile Image Container and Overlap Effect */
+.profile-img-container {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    margin-top: -65px; /* इमेज कार्डच्या अर्धी वर जाण्यासाठी */
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Stars */
+.stars {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.blue-stars {
+    color: #2b6bf3;
+}
+
+.white-stars {
+    color: #ffffff;
+}
+
+/* Text Stylings */
+.name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.designation {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* Quotes */
+.quote-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    transform: rotate(180deg); /* डिझाइननुसार कोट उलटा करण्यासाठी */
+}
+
+.blue-quote {
+    color: #2b6bf3;
+}
+
+.white-quote {
+    color: #ffffff;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Middle Card (Highlighted Blue Card)
+   ========================================== */
+.testimonial-card.highlighted {
+    background-color: #2b6bf3;
+    color: #ffffff;
+    box-shadow: 0 15px 35px rgba(43, 107, 243, 0.3);
+}
+
+.testimonial-card.highlighted .name {
+    color: #ffffff;
+}
+
+.testimonial-card.highlighted .designation {
+    color: #e0e8ff;
+}
+
+.testimonial-card.highlighted .review-text {
+    color: #e0e8ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .section-title {
+        margin-bottom: 100px;
+    }
+    .testimonials-container {
+        gap: 80px; /* मोबाईलवर कार्ड्स एकाखाली एक येतील तेव्हा स्पेस राहण्यासाठी */
+    }
+}
