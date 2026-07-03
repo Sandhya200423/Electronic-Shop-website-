@@ -56,3 +56,21 @@ AOS.init({
   duration: 1000,
   once: true,
 });
+
+// Auto close navbar on mobile after clicking a nav link
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  const navbarCollapse = document.getElementById("navbarNav");
+
+  navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+
+      // Only on mobile
+      if (window.innerWidth < 992) {
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+        bsCollapse.hide();
+      }
+
+    });
+  });
+});

@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* ==========================================================================
@@ -23,21 +24,16 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body{
+    overflow-x: hidden;
+    width: 100%;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 a {
@@ -220,12 +216,12 @@ ul {
 }
 
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  align-items: center;
-  gap: 50px;
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:40px;
 }
+
 .hero-btns {
   display: flex;
   gap: 14px;
@@ -315,16 +311,15 @@ ul {
 .about-image {
   flex: 1;
   display: flex;
-  justify-content: flex-start; /* LEFT align */
+  justify-content: flex-start;
 }
 
-.about-image img {
-  width: 100%;
-  max-width: 520px;   /* IMAGE मोठी */
-  height: 520px;      /* IMAGE height वाढवली */
-  object-fit: cover;
-  border-radius: 25px;
-  box-shadow: var(--shadow);
+.about-image img{
+    width:100%;
+    max-width:520px;
+    height:auto;
+    aspect-ratio:1/1;
+    object-fit:cover;
 }
 
 /* overlay container */
@@ -336,7 +331,7 @@ ul {
   height: 100%;
 }
 .point {
-  background: #dae8ee; /* default clean background */
+  background: #dae8ee;
 }
 
 /* card style */
@@ -457,18 +452,6 @@ ul {
   transform: rotate(45deg);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .point {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .point-arrow-btn {
-    align-self: flex-end;
-  }
-}
-
 /* ==========================================================================
    8. SERVICES SECTION
    ========================================================================== */
@@ -521,19 +504,6 @@ ul {
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 25px 60px rgba(14, 165, 164, 0.25);
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ==========================================================================
@@ -602,7 +572,7 @@ ul {
   object-fit: cover;
 }
 
-/* DARK GRADIENT OVERLAY (premium look) */
+/* DARK GRADIENT OVERLAY */
 .process-card::after {
   content: "";
   position: absolute;
@@ -635,7 +605,7 @@ ul {
 }
 
 /* ==========================
-      Pricing Section
+     Pricing Section
 ========================== */
 
 .pricing{
@@ -645,8 +615,8 @@ ul {
 
 .pricing-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:35px;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
     margin-top:60px;
 }
 
@@ -668,11 +638,10 @@ ul {
 
 .pricing-card.popular{
     border:3px solid #0ea5a4;
-    transform:scale(1.05);
 }
 
 .pricing-card.popular:hover{
-    transform:scale(1.05) translateY(-10px);
+    transform:translateY(-10px);
 }
 
 .badge{
@@ -718,25 +687,9 @@ ul {
     color:#475569;
 }
 
-.btn-primary{
-    display:inline-block;
-    background:#0ea5a4;
-    color:#fff;
-    padding:14px 34px;
-    border-radius:50px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn-primary:hover{
-    background:#0f172a;
-}
 /* ======================================================
                 TESTIMONIAL SECTION
 ====================================================== */
-
-
 
 .testimonials{
     background:linear-gradient(135deg, #e6fffb, #f8fafc);
@@ -769,12 +722,9 @@ ul {
     box-shadow:0 15px 40px rgba(0,0,0,.08);
     transition:all .4s ease;
     overflow:hidden;
-
     opacity:.65;
     transform:scale(.92);
 }
-
-/* Normal Hover */
 
 .testimonial-card:hover{
     border-color:#0ea5a4;
@@ -782,23 +732,16 @@ ul {
 }
 
 /* ======================================================
-            ACTIVE (CENTER) CARD
+             ACTIVE (CENTER) CARD
 ====================================================== */
 
 .swiper-slide-active .testimonial-card{
-
     opacity:1;
-
     transform:scale(1.05);
-
     background:linear-gradient(135deg,#0ea5a4,#13c7c5);
-
     border-color:#0ea5a4;
-
     box-shadow:0 25px 60px rgba(14,165,164,.35);
 }
-
-/* Text */
 
 .swiper-slide-active .testimonial-card h3,
 .swiper-slide-active .testimonial-card p,
@@ -806,13 +749,9 @@ ul {
     color:#fff;
 }
 
-/* Stars */
-
 .swiper-slide-active .stars{
     color:#ffd43b;
 }
-
-/* Quote */
 
 .swiper-slide-active .quote-icon{
     background:#fff;
@@ -837,8 +776,6 @@ ul {
     box-shadow:0 10px 25px rgba(0,0,0,.15);
     transition:.35s;
 }
-
-/* Active Image */
 
 .swiper-slide-active .profile-img img{
     transform:scale(1.12);
@@ -915,51 +852,6 @@ ul {
     transform:scale(1.1);
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:768px){
-
-.testimonial-card{
-    max-width:100%;
-    padding:70px 20px 30px;
-}
-
-.profile-img img{
-    width:80px;
-    height:80px;
-}
-
-.swiper-button-next,
-.swiper-button-prev{
-    width:45px;
-    height:45px;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after{
-    font-size:15px;
-}
-
-}
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 992px){
-  .testimonial-content{
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px){
-  .testimonial-content{
-    grid-template-columns: 1fr;
-  }
-
-  .section-title{
-    font-size: 24px;
-  }
-}
 /* ==========================================================================
    12. FAQ SECTION
    ========================================================================== */
@@ -973,8 +865,8 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 50px;
+  flex-wrap: wrap;
 }
-
 .faq-image {
   flex: 1;
   text-align: center;
@@ -1000,11 +892,10 @@ ul {
   margin-top: 30px;
 }
 
-/* ACTIVE (OPEN) QUESTION BOX */
 .faq-item[open] summary {
-  background: #0ea5a4;   /* BLUE/GREEN */
+  background: #0ea5a4;
   color: #fff;
-}/* arrow color change */
+}
 .faq-item[open] summary::after {
   color: #fff;
 }
@@ -1020,7 +911,6 @@ ul {
   background: #fff;
 }
 
-
 .faq-item summary::-webkit-details-marker {
   display: none;
 }
@@ -1032,8 +922,6 @@ ul {
   font-size: 22px;
   color: #0d6efd;
 }
-
-
 
 .faq-item p {
   margin-top: 12px;
@@ -1062,6 +950,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .cta h2,
@@ -1138,109 +1027,5 @@ ul {
   font-size: 12px;
 }
 
-/* ==========================================================================
-   15. RESPONSIVE DESIGN (OPTIMIZED)
-   ========================================================================== */
 
-/* Large Tablets & Small Laptops */
-@media (max-width: 992px) {
 
-  .section {
-    padding: 70px 0;
-  }
-
-  .hero {
-    padding-top: 50px;
-  }
-
-  
-
-  /* GRID FIX */
-  .hero-grid,
-  .about-grid,
-  .why-grid,
-  .faq-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-
-  /* 2 COLUMN GRIDS */
-  .feature-grid,
-  .services-grid,
-  .testimonial-grid,
-  .process-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  /* CTA FIX */
-  .cta-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 40px 30px;
-  }
-
-  .faq-image img {
-    max-width: 320px;
-    width: 100%;
-  }
-
-  .faq-content {
-    width: 100%;
-  }
-}
-
-/* Small Tablets & Big Phones */
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .nav-links { gap: 20px; }
-
-  .hero h1,
-  .about-content h2,
-  .section-header h2,
-  .why h2,
-  .cta h2 {
-    font-size: 2rem;
-  }
-
-  .feature-strip { margin-top: 20px; }
-
-  .feature-grid,
-  .services-grid,
-  .process-grid,
-  .testimonial-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Extra Small Phones */
-@media (max-width: 576px) {
-  .container { width: 92%; }
-  .hero h1 { font-size: 1.8rem; }
-  .hero-btns { flex-direction: column; }
-  .btn { width: 100%; text-align: center; }
-  
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    font-size: 14px;
-  }
-
-  .faq { padding: 70px 5%; }
-  .faq-item summary { font-size: 16px; }
-  .faq-item p { font-size: 14px; }
-  .footer { text-align: center; }
-  .social-icons { justify-content: center; }
-}
