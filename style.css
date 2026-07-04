@@ -962,60 +962,132 @@ ul {
 /* ==========================================================================
    14. FOOTER SECTION
    ========================================================================== */
+/* ================= FOOTER ================= */
+
 .footer {
   background: var(--secondary);
   color: var(--white);
-  padding: 70px 0 30px;
+  padding: 55px 0 25px;
 }
 
 .footer .logo {
-  color: #ffffff;
+  color: #fff;
 }
 
 .footer .logo span {
   color: var(--primary);
 }
 
+/* Footer Layout */
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 50px;
+  align-items: start;
 }
 
-.footer h4 {
+/* Brand */
+.footer-grid > div:first-child {
+  text-align: center;
+}
+
+.footer-grid > div:first-child p {
+  max-width: 380px;
+  margin: 18px auto 0;
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+/* ================= Quick Links ================= */
+
+.footer-grid > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-grid > div:nth-child(2) h4 {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+.footer-grid > div:nth-child(2) ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-grid > div:nth-child(2) li {
   margin-bottom: 14px;
 }
 
-.footer ul li {
-  margin-bottom: 10px;
+.footer-grid > div:nth-child(2) a {
+  display: inline-block;
+  color: #cbd5e1;
+  transition: 0.3s;
 }
 
-.footer a {
+.footer-grid > div:nth-child(2) a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+/* ================= Contact ================= */
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-contact h4 {
+  margin-bottom: 22px;
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
   color: #cbd5e1;
 }
 
-.footer a:hover {
+.footer-contact p i {
+  width: 20px;
+  text-align: center;
   color: var(--primary);
+  flex-shrink: 0;
 }
+
+/* ================= Social Icons ================= */
 
 .social-icons {
   display: flex;
-  gap: 14px;
-  margin-top: 12px;
+  align-items: center;
+  gap: 18px;
+  margin-top: 10px;
 }
 
 .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
   color: #cbd5e1;
   font-size: 18px;
-  transition: 0.3s;
+  transition: all .3s ease;
 }
 
 .social-icons a:hover {
   color: var(--primary);
+  transform: translateY(-3px);
 }
 
+/* ================= Footer Bottom ================= */
+
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255,255,255,.15);
   margin-top: 40px;
   padding-top: 20px;
   text-align: center;
@@ -1026,6 +1098,3 @@ ul {
   color: #cbd5e1;
   font-size: 12px;
 }
-
-
-
